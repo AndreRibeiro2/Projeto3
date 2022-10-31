@@ -1,0 +1,80 @@
+.link {
+
+    display: inline-block;
+    font-size: 1.2em;
+    padding-right: 1.5em;
+    line-height: 1em;
+    text-decoration: none;
+    content: #23a0df;
+
+}
+
+.link:hover {
+
+    color: #666666;
+
+}
+
+.link--block {
+
+    display: block;
+
+}
+
+.link_seta {
+
+  display: inline-block;
+  height: 100%;
+  position: relative;
+  top: -5px;
+  left: 16px;
+
+}
+
+.link_seta::before,.link_seta::after {
+           
+    content: '';
+    transition: all 275ms cubic-bezier(.4,.25,.3,1);
+    position: absolute;
+    right: 0;
+    background-color: #56b6e6;
+    width: 3px;
+    height: 0.4em;
+    border-radius: 3px;
+
+}
+
+
+.link_seta::before {
+
+    bottom: 50%;
+    transform: translateX(0) rotate(-45deg);
+    transform-origin: 100% 100%;
+
+}
+
+.link_seta::after {
+
+    top: 50%;
+    transform: translateX(0) rotate(45deg);
+    transform-origin: 100% 0;
+
+}
+
+.link:hover .link_seta::before {
+
+    transform: translateX(-1rem) rotate(45deg);
+    transform-origin: 0 100%;
+    background-color: #666666;
+    height: 0.4em;
+
+}
+
+.link:hover .link_seta::after {
+
+    transform: translateX(-1rem) rotate(-45deg);
+    transform-origin: 0 0;
+    background-color: #666666;
+    height: 0.4em;
+
+}
